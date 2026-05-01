@@ -78,6 +78,7 @@ export default function AboutPage() {
             {team.map((member, index) => (
               <article key={member.name} className="flex flex-col">
                 {/* Portrait */}
+                <div className="w-3/4 md:w-full mx-auto md:mx-0">
                 <div className="w-full relative overflow-hidden mb-10" style={{ paddingBottom: "125%" }}>
                   {index === 1 ? (
                     <Image
@@ -95,6 +96,7 @@ export default function AboutPage() {
                       style={{ objectPosition: "30% top" }}
                     />
                   )}
+                </div>
                 </div>
 
                 <div className="flex flex-col gap-1 mb-6">
