@@ -81,7 +81,7 @@ export default function AboutPage() {
                 <div className="w-full aspect-[4/5] mb-10 relative overflow-hidden">
                   {index === 1 ? (
                     <Image
-                      src="/images/joey.png"
+                      src="/images/joey.jpg"
                       alt="Joey Levine"
                       fill
                       className="object-cover object-top"
