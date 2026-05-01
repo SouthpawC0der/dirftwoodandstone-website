@@ -60,7 +60,7 @@ export default function HomePage() {
           </div>
 
           {/* Rotating tagline — stacked on mobile, absolute on desktop */}
-          <div className="animate-fade-up animate-delay-200 text-center mt-6 mb-10 md:mt-0 md:mb-0 md:absolute md:bottom-[230px] md:left-0 md:right-0">
+          <div className="animate-fade-up animate-delay-200 text-center mt-12 mb-10 md:mt-0 md:mb-0 md:absolute md:bottom-[230px] md:left-0 md:right-0">
             <RotatingTagline className="text-white text-xs sm:text-base md:text-lg tracking-[0.15em] uppercase mb-2" />
           </div>
 
