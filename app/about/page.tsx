@@ -35,7 +35,7 @@ export default function AboutPage() {
       {/* ─── Page Header ──────────────────────────────────────────── */}
       <section className="relative pt-40 pb-24 lg:pt-48 lg:pb-32 px-6 overflow-hidden">
         <Image
-          src="/images/home21.jpg"
+          src="/images/home21_no_watermark.png"
           alt="Estate background"
           fill
           className="object-cover"
