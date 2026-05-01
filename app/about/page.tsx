@@ -77,23 +77,23 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             {team.map((member, index) => (
               <article key={member.name} className="flex flex-col">
-                {/* Portrait placeholder */}
-                <div className="w-full aspect-[4/5] mb-10 relative overflow-hidden">
+                {/* Portrait */}
+                <div className="w-full mb-10 overflow-hidden">
                   {index === 1 ? (
                     <Image
                       src="/images/joey.jpg"
                       alt="Joey Levine"
-                      fill
-                      className="object-cover object-top"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      width={896}
+                      height={1195}
+                      className="w-full h-auto object-cover object-top"
                     />
                   ) : (
                     <Image
                       src="/images/portshot.jpg"
                       alt="Alec Mikels"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      width={800}
+                      height={1000}
+                      className="w-full h-auto object-cover"
                       style={{ objectPosition: "30% top" }}
                     />
                   )}
