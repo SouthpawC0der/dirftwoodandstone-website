@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     "Thoughtful, highly tailored estate management and concierge services. All the expertise, without the full-time commitment.",
   keywords:
     "estate management, concierge services, private estates, luxury homes, Los Angeles, household management",
+  icons: {
+    icon: "/images/DS3.png",
+    apple: "/images/DS3.png",
+  },
   openGraph: {
     title: "Driftwood & Stone | Private Estate Services",
     description:
