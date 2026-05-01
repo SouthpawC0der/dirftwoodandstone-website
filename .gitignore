@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# large video files (upload manually to host via SFTP)
+public/videos/Hero2.mp4
+public/videos/hero5.mp4
+public/videos/Malibu\ Sample.mp4
