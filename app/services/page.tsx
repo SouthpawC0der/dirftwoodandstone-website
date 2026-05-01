@@ -264,7 +264,7 @@ export default function ServicesPage() {
             className="text-cream text-3xl sm:text-4xl lg:text-5xl text-balance font-semibold"
             style={{ fontFamily: "var(--font-cinzel, serif)", fontWeight: 600 }}
           >
-            Your Life. Expertly Managed.
+            Your Estate, Our Priority.
           </p>
         </div>
       </section>
