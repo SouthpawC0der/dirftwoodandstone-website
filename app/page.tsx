@@ -42,15 +42,15 @@ export default function HomePage() {
     <>
       {/* ─── Hero ─────────────────────────────────────────────────── */}
       <VideoHero videoSrc="/videos/sky.mp4" contentClassName="justify-center md:justify-end pb-6 md:pb-47">
-        <div className="max-w-3xl mx-auto flex flex-col items-center gap-6 md:gap-0 w-full">
+        <div className="max-w-3xl mx-auto flex flex-col items-center gap-0 md:gap-0 w-full mt-20 md:mt-0">
           {/* Logo */}
-          <div className="animate-fade-up relative top-0 md:top-[-100px] md:mb-6">
+          <div className="animate-fade-up relative top-0 md:top-[-100px] mb-10 md:mb-6">
             <Image
               src="/images/DAS-LOGO-ONELINE-DESCRIPTOR-RGB_WHITE.png"
               alt="Driftwood & Stone — Private Estate Services"
               width={1360}
               height={800}
-              className="w-[280px] sm:w-[420px] md:w-[896px] lg:w-[1152px] xl:w-[1360px] max-w-full h-auto object-contain"
+              className="w-[360px] sm:w-[420px] md:w-[896px] lg:w-[1152px] xl:w-[1360px] max-w-full h-auto object-contain"
               priority
               style={{
                 filter:
@@ -60,8 +60,8 @@ export default function HomePage() {
           </div>
 
           {/* Rotating tagline — stacked on mobile, absolute on desktop */}
-          <div className="animate-fade-up animate-delay-200 text-center md:absolute md:bottom-[230px] md:left-0 md:right-0">
-            <RotatingTagline className="text-white text-base sm:text-lg tracking-[0.15em] uppercase mb-2" />
+          <div className="animate-fade-up animate-delay-200 text-center mb-10 md:mb-0 md:absolute md:bottom-[230px] md:left-0 md:right-0">
+            <RotatingTagline className="text-white text-xs sm:text-base md:text-lg tracking-[0.15em] uppercase mb-2" />
           </div>
 
           {/* Buttons — stacked on mobile, absolute on desktop */}
