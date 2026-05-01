@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "pkill -f 'next dev' 2>/dev/null; sleep 1; env -u NODE_OPTIONS next dev --webpack",
     "build": "next build",
-    "start": "next start -p ${PORT:-3000}",
+    "start": "node server.js",
     "lint": "eslint"
   },
   "dependencies": {
