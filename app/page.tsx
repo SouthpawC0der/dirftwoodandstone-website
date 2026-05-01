@@ -41,19 +41,16 @@ export default function HomePage() {
   return (
     <>
       {/* ─── Hero ─────────────────────────────────────────────────── */}
-      <VideoHero videoSrc="/videos/sky.mp4" contentClassName="pb-47">
-        <div className="max-w-3xl mx-auto flex flex-col items-center">
-          {/* DS4.png — logo with Private Estate Services text */}
-          <div
-            className="mb-6 animate-fade-up"
-            style={{ position: "relative", top: "-100px" }}
-          >
+      <VideoHero videoSrc="/videos/sky.mp4" contentClassName="pb-20 md:pb-47">
+        <div className="max-w-3xl mx-auto flex flex-col items-center gap-6 md:gap-0 w-full">
+          {/* Logo */}
+          <div className="animate-fade-up relative top-0 md:top-[-100px] md:mb-6">
             <Image
               src="/images/DAS-LOGO-ONELINE-DESCRIPTOR-RGB_WHITE.png"
               alt="Driftwood & Stone — Private Estate Services"
               width={1360}
               height={800}
-              className="w-[896px] sm:w-[1152px] lg:w-[1280px] xl:w-[1360px] max-w-full h-auto object-contain"
+              className="w-[280px] sm:w-[420px] md:w-[896px] lg:w-[1152px] xl:w-[1360px] max-w-full h-auto object-contain"
               priority
               style={{
                 filter:
@@ -62,19 +59,13 @@ export default function HomePage() {
             />
           </div>
 
-          {/* Rotating tagline — absolutely positioned */}
-          <div
-            className="animate-fade-up animate-delay-200"
-            style={{ position: "absolute", bottom: "230px", left: 0, right: 0, textAlign: "center" }}
-          >
+          {/* Rotating tagline — stacked on mobile, absolute on desktop */}
+          <div className="animate-fade-up animate-delay-200 text-center md:absolute md:bottom-[230px] md:left-0 md:right-0">
             <RotatingTagline className="text-white text-base sm:text-lg tracking-[0.15em] uppercase mb-2" />
           </div>
 
-          {/* Buttons — absolutely positioned independently */}
-          <div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up animate-delay-300"
-            style={{ position: "absolute", bottom: "165px", left: 0, right: 0 }}
-          >
+          {/* Buttons — stacked on mobile, absolute on desktop */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up animate-delay-300 md:absolute md:bottom-[165px] md:left-0 md:right-0">
             <Link
               href="/contact"
               className="px-8 py-4 bg-driftwood-500 text-cream text-sm tracking-[0.2em] uppercase hover:bg-driftwood-400 transition-colors duration-300 cursor-pointer min-w-[180px] text-center"
