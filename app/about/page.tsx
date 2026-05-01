@@ -38,9 +38,9 @@ export default function AboutPage() {
           src="/images/home21_no_watermark.png"
           alt="Estate background"
           fill
+          priority
           className="object-cover"
           sizes="100vw"
-          preload
           style={{ objectPosition: "center 28%" }}
         />
         <div className="absolute inset-0 bg-charcoal/30" />
