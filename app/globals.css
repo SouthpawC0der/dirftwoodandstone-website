@@ -1,26 +1,168 @@
 @import "tailwindcss";
+@source "../app/**/*.{ts,tsx,js,jsx}";
+
+@font-face {
+  font-family: 'Cinzel';
+  src: url('/fonts/cinzel.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('/fonts/josefin-sans.woff2') format('woff2');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-cinzel: 'Cinzel', serif;
+  --font-josefin: 'Josefin Sans', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  /* Driftwood & Stone Brand Colors */
+  --color-driftwood-50: #faf8f4;
+  --color-driftwood-100: #f0e8d8;
+  --color-driftwood-200: #deccb2;
+  --color-driftwood-300: #c9ad88;
+  --color-driftwood-400: #b89069;
+  --color-driftwood-500: #a87b52;
+  --color-driftwood-600: #8d6342;
+  --color-driftwood-700: #704e35;
+  --color-driftwood-800: #573d2b;
+  --color-driftwood-900: #3d2b1e;
+
+  --color-stone-50: #f7f6f4;
+  --color-stone-100: #eeece8;
+  --color-stone-200: #d8d4cc;
+  --color-stone-300: #b8b2a8;
+  --color-stone-400: #948d82;
+  --color-stone-500: #7a7268;
+  --color-stone-600: #635d54;
+  --color-stone-700: #4e4940;
+  --color-stone-800: #3a3630;
+  --color-stone-900: #1e1c18;
+
+  --color-cream: #faf8f2;
+  --color-charcoal: #141410;
+
+  /* Fonts */
+  --font-heading: 'Cinzel', Georgia, serif;
+  --font-body: 'Josefin Sans', 'Helvetica Neue', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-stone-900);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-stone-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-driftwood-400);
+  border-radius: 3px;
+}
+
+/* Focus states for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-driftwood-400);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom utilities */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Hero video overlay gradient */
+.hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 20, 16, 0.10) 0%,
+    rgba(20, 20, 16, 0.05) 50%,
+    rgba(20, 20, 16, 0.20) 100%
+  );
+}
+
+/* Animate fade-up on scroll */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
+
+/* Divider ornament */
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ornament-divider::before,
+.ornament-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.25;
 }
