@@ -41,7 +41,7 @@ export default function HomePage() {
   return (
     <>
       {/* ─── Hero ─────────────────────────────────────────────────── */}
-      <VideoHero videoSrc="/videos/sky.mp4" contentClassName="pb-20 md:pb-47">
+      <VideoHero videoSrc="/videos/sky.mp4" contentClassName="justify-center md:justify-end pb-6 md:pb-47">
         <div className="max-w-3xl mx-auto flex flex-col items-center gap-6 md:gap-0 w-full">
           {/* Logo */}
           <div className="animate-fade-up relative top-0 md:top-[-100px] md:mb-6">

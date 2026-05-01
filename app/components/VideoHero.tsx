@@ -88,7 +88,7 @@ export default function VideoHero({ videoSrc, imageSrc, posterSrc, contentClassN
       <div className="absolute inset-0 bg-charcoal/5" aria-hidden="true" />
 
       {/* Content */}
-      <div className={`relative z-10 flex flex-col items-center justify-end h-full text-center px-6 ${contentClassName ?? "pb-32"}`}>
+      <div className={`relative z-10 flex flex-col items-center h-full text-center px-6 ${contentClassName ?? "justify-end pb-32"}`}>
         {children}
       </div>
 
