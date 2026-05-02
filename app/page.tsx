@@ -45,12 +45,26 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto flex flex-col items-center gap-0 md:gap-0 w-full mt-20 md:mt-0">
           {/* Logo */}
           <div className="animate-fade-up relative top-0 md:top-[-100px] mb-10 md:mb-6">
+            {/* Mobile logo */}
+            <Image
+              src="/images/DS_logo_-2.png"
+              alt="Driftwood & Stone — Private Estate Services"
+              width={2760}
+              height={1133}
+              className="block md:hidden w-[720px] max-w-full h-auto object-contain"
+              priority
+              style={{
+                filter:
+                  "drop-shadow(0 4px 24px rgba(0,0,0,0.7)) drop-shadow(0 1px 6px rgba(0,0,0,0.9))",
+              }}
+            />
+            {/* Desktop logo */}
             <Image
               src="/images/DS_logo_transparent.png"
               alt="Driftwood & Stone — Private Estate Services"
               width={1360}
               height={800}
-              className="w-[360px] sm:w-[420px] md:w-[896px] lg:w-[1152px] xl:w-[1360px] max-w-full h-auto object-contain"
+              className="hidden md:block md:w-[896px] lg:w-[1152px] xl:w-[1360px] max-w-full h-auto object-contain"
               priority
               style={{
                 filter:
