@@ -51,7 +51,7 @@ export default function HomePage() {
               alt="Driftwood & Stone — Private Estate Services"
               width={2760}
               height={1133}
-              className="block md:hidden w-[720px] max-w-full h-auto object-contain"
+              className="block md:hidden w-[2160px] h-auto object-contain"
               priority
               style={{
                 filter:
