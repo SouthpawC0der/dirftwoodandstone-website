@@ -60,7 +60,7 @@ export default function HomePage() {
             />
             {/* Desktop logo */}
             <Image
-              src="/images/DS_logo_transparent.png"
+              src="/images/DAS-LOGO-ONELINE-DESCRIPTOR-RGB_WHITE.png"
               alt="Driftwood & Stone — Private Estate Services"
               width={1360}
               height={800}
