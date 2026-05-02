@@ -43,7 +43,7 @@ export default function VideoHero({ videoSrc, imageSrc, posterSrc, contentClassN
       {/* Mobile fallback — static poster shown on small screens */}
       {videoSrc && (
         <div
-          className="md:hidden absolute inset-0 w-full h-full bg-cover bg-center"
+          className="md:hidden absolute inset-0 w-full h-full bg-cover bg-bottom"
           style={{ backgroundImage: `url(${posterSrc ?? "/images/sky-poster.jpg"})` }}
           aria-hidden="true"
         />
