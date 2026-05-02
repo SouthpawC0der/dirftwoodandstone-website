@@ -47,7 +47,7 @@ export default function HomePage() {
           <div className="animate-fade-up relative top-0 md:top-[-100px] mb-10 md:mb-6">
             {/* Mobile logo */}
             <Image
-              src="/images/DS_logo_-2.png"
+              src="/images/DS6.png"
               alt="Driftwood & Stone — Private Estate Services"
               width={2760}
               height={1133}
