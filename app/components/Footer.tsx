@@ -12,15 +12,19 @@ export default function Footer() {
   return (
     <footer className="bg-charcoal text-stone-300 relative">
       {pathname === "/" && (
-        <a
-          href="https://www.dspacestudio.com/los-angeles"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="absolute top-4 right-6 lg:right-10 text-white text-xs tracking-wide hover:text-cream transition-colors duration-300"
+        <p
+          className="absolute top-4 right-6 lg:right-10 text-white text-xs tracking-wide"
           style={{ fontFamily: "var(--font-josefin, sans-serif)", fontWeight: 300 }}
         >
-          Courtesy dSPACE Studio / Tony Soluri
-        </a>
+          Courtesy{" "}
+          <a href="https://www.dspacestudio.com/los-angeles" target="_blank" rel="noopener noreferrer" className="hover:text-cream transition-colors duration-300">
+            dSPACE Studio
+          </a>
+          {" / "}
+          <a href="https://soluriphotography.com/" target="_blank" rel="noopener noreferrer" className="hover:text-cream transition-colors duration-300">
+            Tony Soluri
+          </a>
+        </p>
       )}
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 items-start">
