@@ -17,13 +17,18 @@ interface VideoHeroProps {
 export default function VideoHero({ videoSrc, imageSrc, posterSrc, contentClassName, children }: VideoHeroProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return;
-    v.play().catch(() => {
-      // Autoplay blocked — video remains paused, poster/fallback shows
-    });
+    v.play().catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
@@ -93,14 +98,17 @@ export default function VideoHero({ videoSrc, imageSrc, posterSrc, contentClassN
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-60">
+      <div
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 transition-opacity duration-700"
+        style={{ opacity: scrolled ? 0 : 1 }}
+      >
         <span
-          className="text-[9px] tracking-[0.4em] uppercase text-stone-300"
-          style={{ fontFamily: "var(--font-josefin, sans-serif)", fontWeight: 300 }}
+          className="text-[9px] tracking-[0.4em] uppercase text-white"
+          style={{ fontFamily: "var(--font-josefin, sans-serif)", fontWeight: 700 }}
         >
           Scroll
         </span>
-        <div className="w-px h-10 bg-driftwood-400 animate-pulse" />
+        <div style={{ width: "2px", height: "40px", backgroundColor: "white" }} className="animate-pulse" />
       </div>
     </section>
   );
