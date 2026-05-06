@@ -81,10 +81,10 @@ export default function Navigation() {
             ))}
             <Link
               href="/contact"
-              className={`ml-2 px-5 py-2.5 border text-sm tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer
+              className={`text-sm tracking-[0.2em] uppercase transition-colors duration-300 cursor-pointer
                 ${pathname === "/contact"
-                  ? "border-white text-white bg-white/10"
-                  : "border-white text-white hover:bg-white hover:text-charcoal"
+                  ? "text-driftwood-300"
+                  : "text-white hover:text-cream"
                 }`}
               style={{ fontFamily: "var(--font-josefin, sans-serif)", fontWeight: 500 }}
             >
