@@ -138,7 +138,8 @@ export default function Navigation() {
           ))}
           <Link
             href="/contact"
-            className="self-start px-5 py-2.5 border border-white text-white text-sm tracking-[0.2em] uppercase cursor-pointer hover:bg-white hover:text-charcoal transition-all duration-300"
+            className={`text-base tracking-[0.2em] uppercase cursor-pointer transition-colors duration-300
+              ${pathname === "/contact" ? "text-driftwood-300" : "text-white hover:text-cream"}`}
             style={{ fontFamily: "var(--font-josefin, sans-serif)", fontWeight: 500 }}
           >
             Contact
