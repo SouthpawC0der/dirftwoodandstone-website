@@ -39,7 +39,7 @@ export default function VideoHero({ videoSrc, imageSrc, posterSrc, contentClassN
           src={imageSrc}
           alt=""
           fill
-          className="object-cover object-center"
+          className="object-cover object-center pointer-events-none"
           priority
           aria-hidden="true"
         />
@@ -48,7 +48,7 @@ export default function VideoHero({ videoSrc, imageSrc, posterSrc, contentClassN
       {/* Mobile fallback — static poster shown on small screens */}
       {videoSrc && (
         <div
-          className="md:hidden absolute inset-0 w-full h-full bg-cover bg-bottom"
+          className="md:hidden absolute inset-0 w-full h-full bg-cover bg-bottom pointer-events-none"
           style={{ backgroundImage: `url(${posterSrc ?? "/images/sky-poster.jpg"})` }}
           aria-hidden="true"
         />
@@ -58,7 +58,7 @@ export default function VideoHero({ videoSrc, imageSrc, posterSrc, contentClassN
       {videoSrc && (
         <video
           ref={videoRef}
-          className={`hidden md:block absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+          className={`hidden md:block absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 pointer-events-none ${
             videoLoaded ? "opacity-100" : "opacity-0"
           }`}
           autoPlay
@@ -89,8 +89,8 @@ export default function VideoHero({ videoSrc, imageSrc, posterSrc, contentClassN
       )}
 
       {/* Dark overlay for text legibility */}
-      <div className="hero-overlay absolute inset-0" aria-hidden="true" />
-      <div className="absolute inset-0 bg-charcoal/5" aria-hidden="true" />
+      <div className="hero-overlay absolute inset-0 pointer-events-none" aria-hidden="true" />
+      <div className="absolute inset-0 bg-charcoal/5 pointer-events-none" aria-hidden="true" />
 
       {/* Content */}
       <div className={`relative z-10 flex flex-col items-center h-full text-center px-6 ${contentClassName ?? "justify-end pb-32"}`}>

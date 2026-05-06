@@ -29,7 +29,7 @@ export async function submitContactForm(
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
-      from: "Driftwood & Stone <onboarding@resend.dev>",
+      from: "Driftwood & Stone <notreply@driftwoodandstonehomes.com>",
       to: "info@driftwoodandstonehomes.com",
       replyTo: email,
       subject: `New inquiry from ${name}`,
