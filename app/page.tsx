@@ -126,12 +126,12 @@ export default function HomePage() {
               you to spend more time enjoying life and less time managing it.
             </p>
             <p>
-              Our mission is simple: to make upscale estate management and lifestyle support accessible, tailored, and stress-free, delivered personally by us as a seamless extension of your household.
+              <strong>Our mission is simple:</strong> to make upscale estate management and lifestyle support accessible, tailored, and stress-free, delivered personally by us as a seamless extension of your household.
             </p>
             <p>
               Whether you need household management, renovation oversight,
               preparing a home for sale, travel planning, or simply personal assistance, we
-              deliver flexible, on-demand support designed around your lifestyle. And because
+              deliver full or part-time flexible, on-demand support designed around your lifestyle. And because
               every client&apos;s needs are unique, our services extend far beyond these examples
               — always delivered with discretion, expertise, and a commitment to making your
               life easier.
