@@ -17,12 +17,12 @@ const pillars = [
   {
     title: "Flexibility & Scalability",
     description:
-      "Whether remote or on-site, our services adapt to what the client truly needs month to month, ranging from last-minute needs to support while you travel.",
+      "Whether part-time or full-time, remote or on-site, our services adapt to what the client truly needs month to month, ranging from last-minute needs to support while you travel.",
   },
   {
     title: "Elite Vendor Network & Negotiation Power",
     description:
-      "We collaborate with trusted contractors and service providers to ensure every task is executed by the right professional, saving clients both time and money.",
+      "We collaborate with trusted contractors and service providers to ensure every task is executed by the right professional within the agreed upon budget, saving clients both time and money.",
   },
   {
     title: "Bespoke Proactive Service",
@@ -45,10 +45,10 @@ const serviceCategories = [
   {
     category: "Estate & Household Management",
     items: [
-      "AV & Smart Home Technology",
+      "AV & Smart Home Technology Coordination",
       "Household staff coordination & oversight",
       "Vendor sourcing, management & scheduling",
-      "Recurring Maintenance",
+      "Recurring Maintenance Scheduling",
       "Estate manual & systems creation",
       "Invoice tracking & expense reporting",
     ],
@@ -264,7 +264,7 @@ export default function ServicesPage() {
             className="text-cream text-3xl sm:text-4xl lg:text-5xl text-balance font-semibold"
             style={{ fontFamily: "var(--font-cinzel, serif)", fontWeight: 600 }}
           >
-            Your Estate, Our Priority.
+            Your Home. Our Priority.
           </p>
         </div>
       </section>
