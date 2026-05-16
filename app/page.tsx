@@ -131,7 +131,7 @@ export default function HomePage() {
             <p>
               Whether you need household management, renovation oversight,
               preparing a home for sale, travel planning, or simply personal assistance, we
-              deliver full or part-time, flexible, on-demand support designed around your lifestyle. And because
+              deliver full or part-time, on-demand support designed around your lifestyle. And because
               every client&apos;s needs are unique, our services extend far beyond these examples
               — always delivered with discretion, expertise, and a commitment to making your
               life easier.
