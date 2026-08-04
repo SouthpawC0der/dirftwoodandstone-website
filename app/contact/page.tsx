@@ -51,6 +51,16 @@ export default function ContactPage() {
         </p>
       </div>
 
+      {/* ─── Service Area ─────────────────────────────────────────── */}
+      <div className="w-full bg-cream py-10 px-6 border-b border-stone-100">
+        <p
+          className="text-stone-700 text-base leading-relaxed text-center max-w-3xl mx-auto"
+          style={{ fontFamily: "var(--font-josefin, sans-serif)", fontWeight: 400 }}
+        >
+          We provide estate management and home oversight services throughout Los Angeles, including: Beverly Hills, Bel-Air, Brentwood, Pacific Palisades, Malibu, Santa Monica, Venice, West Hollywood, Hancock Park, Los Feliz, Silver Lake, Sherman Oaks, Studio City, and surrounding communities.
+        </p>
+      </div>
+
       {/* ─── Contact Layout ───────────────────────────────────────── */}
       <section className="bg-cream py-24 lg:py-32 px-6">
         <div className="max-w-7xl mx-auto">

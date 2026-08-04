@@ -22,6 +22,12 @@ export default function VideoHero({ videoSrc, imageSrc, posterSrc, contentClassN
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return;
+    if (v.readyState >= 3) {
+      setVideoLoaded(true);
+    } else {
+      const handler = () => setVideoLoaded(true);
+      v.addEventListener("canplay", handler, { once: true });
+    }
     v.play().catch(() => {});
   }, []);
 
